@@ -122,3 +122,13 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+.plus{
+    color: blue;
+    background-color: white;
+    border: none;
+}
+.minus{
+    color: blue;
+    background-color: white;
+    border: none;
+}
