@@ -86,7 +86,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p id="subtotal">$500</p>
+                        <p  id="subtotal-cost" id="subtotal">$00</p>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$50</p>
+                        <p id="tax-cost">$00</p>
                     </div>
                 </div>
                 <hr>
@@ -104,7 +104,7 @@
                         <h4>Total</h4>
                     </div>
                     <div class="right">
-                        <p>$550</p>
+                        <p id="total-cost">$00</p>
                     </div>
                 </div>
             </div>
@@ -123,6 +123,7 @@
                 firstClassNewCount = firstClassCount - 1;
             }
             firstClassInput.value = firstClassNewCount;
+            calculateTotal();
         }
         function economyClassInput(isIncrease) {
             const economyClassInput = document.getElementById("economyClass-input");
@@ -133,12 +134,29 @@
             }
             if (isIncrease == false && economyClassCount > 0) {
                 economyClassNewCount = economyClassCount - 1;
-            } 
+            }
             economyClassInput.value = economyClassNewCount;
+            calculateTotal();
+        }
+        function calculateTotal() {
+            const firstClassCost = document.getElementById("firstClass-input");
+            const firstCostNumber = parseInt(firstClassCost.value);
+
+            const economyClassCost = document.getElementById("economyClass-input");
+            const economyCostNumber = parseInt(economyClassCost.value);
+
+            const subtotalCost = firstCostNumber * 150 + economyCostNumber * 100;
+            document.getElementById("subtotal-cost").innerText = "$" + subtotalCost;
+
+            const  taxCost = subtotalCost * 0.1;
+            document.getElementById("tax-cost").innerText = "$" + taxCost;
+
+            const totalCost = subtotalCost + taxCost;
+            document.getElementById("total-cost").innerText = "$" + totalCost
         }
 
-        var 
-       
+
+
     </script>
     <!--Thank You-->
 </body>

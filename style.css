@@ -124,11 +124,13 @@ nav ul li a:hover, a.active{
 }
 .plus{
     color: blue;
-    background-color: white;
-    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
 }
 .minus{
     color: blue;
-    background-color: white;
-    border: none;
+    border-radius: 5px;
+    height: 20px;
+    width: 20px;
 }
