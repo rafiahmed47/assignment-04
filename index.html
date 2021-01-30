@@ -27,7 +27,7 @@
     </header>
 
     <!--Booking Section-->
-    <main id="booking-page"  class="main-content container">
+    <main id="booking-page" class="main-content container">
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
@@ -86,7 +86,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p  id="subtotal-cost" id="subtotal">$00</p>
+                        <p id="subtotal-cost" id="subtotal">$00</p>
                     </div>
                 </div>
 
@@ -110,9 +110,9 @@
             </div>
             <button id="book-now" class="btn-style">Book Now</button>
         </div>
-        
+
     </main>
-    
+
     <script>
         function firstClassInput(isIncrease) {
             const firstClassInput = document.getElementById("firstClass-input");
@@ -150,7 +150,7 @@
             const subtotalCost = firstCostNumber * 150 + economyCostNumber * 100;
             document.getElementById("subtotal-cost").innerText = "$" + subtotalCost;
 
-            const  taxCost = subtotalCost * 0.1;
+            const taxCost = subtotalCost * 0.1;
             document.getElementById("tax-cost").innerText = "$" + taxCost;
 
             const totalCost = subtotalCost + taxCost;
