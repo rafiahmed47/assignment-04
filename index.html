@@ -110,7 +110,9 @@
             </div>
             <button id="book-now" class="btn-style">Book Now</button>
         </div>
+        
     </main>
+    
     <script>
         function firstClassInput(isIncrease) {
             const firstClassInput = document.getElementById("firstClass-input");
@@ -154,6 +156,12 @@
             const totalCost = subtotalCost + taxCost;
             document.getElementById("total-cost").innerText = "$" + totalCost
         }
+
+        const bookNow = document.getElementById("book-now");
+        bookNow.addEventListener("click", function () {
+            const bookingArea = document.getElementById("booking-page");
+            bookingArea.style.display = "none";
+        })
 
     </script>
     <!--Thank You-->
